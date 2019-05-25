@@ -30,7 +30,6 @@ public class IStudentServiceImpl implements IStudentService{
 	  studentRepository.deleteById(studentId);
 		return 0;
 	}
-  
 @Override
 public String addStudent(HashMap<String, String> student) {
     Student stu = new Student();
