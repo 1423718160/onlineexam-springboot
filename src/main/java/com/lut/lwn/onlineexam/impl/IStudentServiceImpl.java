@@ -38,6 +38,7 @@ public String addStudent(HashMap<String, String> student) {
     stu.setStuId(student.get("stuId"));
     stu.setStuCardNo(student.get("stuCardNo"));
      
+    
     studentRepository.save(stu);
 	return null;
 }
