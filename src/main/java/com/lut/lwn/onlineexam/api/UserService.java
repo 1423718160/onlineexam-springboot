@@ -11,18 +11,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lut.lwn.onlineexam.bean.Student;
+import com.lut.lwn.onlineexam.bean.User;
+
 
 @CrossOrigin
 @RestController
-@RequestMapping("/student")
-public interface IStudentService {
-    @GetMapping("/findAllStudent")
-    public List<Student> findAllStudent();
-    @GetMapping("/deleteStudentById")
-	public int deleteStudentById(@Param("studentId") Long studentId);
-    @PostMapping("/addStudent")
-	public String addStudent(@RequestBody HashMap<String, String> student);
-	@PostMapping("/updateStudent")
-	public String updateStudent(@RequestBody HashMap<String, String> student);
+@RequestMapping("/user")
+public interface UserService {
+	@GetMapping("/findAllUser")
+	public List<User> findAllTeacher();
+	@GetMapping("/deleteUserById")
+	public int deleteUserById(@Param("UserId") Long userId);
+	@PostMapping("/addUser")
+	public String addUser(@RequestBody HashMap<String, String> user);
+	@PostMapping("/updateUser")
+	public String updateUser(@RequestBody HashMap<String, String> user);
+	
 }
