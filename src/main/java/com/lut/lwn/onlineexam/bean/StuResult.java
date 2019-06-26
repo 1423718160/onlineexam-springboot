@@ -20,89 +20,115 @@ public class StuResult {
 	private String name;
 	// 单选分数
 	@Column(name = "resSingle")
-	private String resSingle;
+	private int resSingle;
 
 	// 编程分数
 	@Column(name = "resProgram")
-	private String resProgram;
+	private int resProgram;
 
 	// 总分
 	@Column(name = "resTotal")
-	private String resTotal;
+	private int resTotal;
 
 	public StuResult() {
 		super();
 	}
 
-	
-
-	public StuResult(String stuId, String name, String resSingle, String resProgram, String resTotal) {
-		super();
-		this.stuId = stuId;
-		this.name = name;
-		this.resSingle = resSingle;
-		this.resProgram = resProgram;
-		this.resTotal = resTotal;
-	}
-
-
-
+	/**
+	 * @return the id
+	 */
 	public Long getId() {
 		return id;
 	}
 
+	/**
+	 * @param id the id to set
+	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
 
+	/**
+	 * @return the stuId
+	 */
 	public String getStuId() {
 		return stuId;
 	}
 
+	/**
+	 * @param stuId the stuId to set
+	 */
 	public void setStuId(String stuId) {
 		this.stuId = stuId;
 	}
 
-	public String getResSingle() {
-		return resSingle;
-	}
-
-	public void setResSingle(String resSingle) {
-		this.resSingle = resSingle;
-	}
-
+	/**
+	 * @return the name
+	 */
 	public String getName() {
 		return name;
 	}
 
-
-
+	/**
+	 * @param name the name to set
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
+	/**
+	 * @return the resSingle
+	 */
+	public int getResSingle() {
+		return resSingle;
+	}
 
+	/**
+	 * @param resSingle the resSingle to set
+	 */
+	public void setResSingle(int resSingle) {
+		this.resSingle = resSingle;
+	}
 
-	public String getResProgram() {
+	/**
+	 * @return the resProgram
+	 */
+	public int getResProgram() {
 		return resProgram;
 	}
 
-	public void setResProgram(String resProgram) {
+	/**
+	 * @param resProgram the resProgram to set
+	 */
+	public void setResProgram(int resProgram) {
 		this.resProgram = resProgram;
 	}
 
-	public String getResTotal() {
+	/**
+	 * @return the resTotal
+	 */
+	public int getResTotal() {
 		return resTotal;
 	}
 
-	public void setResTotal(String resTotal) {
+	/**
+	 * @param resTotal the resTotal to set
+	 */
+	public void setResTotal(int resTotal) {
 		this.resTotal = resTotal;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString() {
-		return "StuResult [id=" + id + ", stuId=" + stuId + ", resSingle=" + resSingle + ", resProgram=" + resProgram
-				+ ", resTotal=" + resTotal + "]";
+		return "StuResult [id=" + id + ", stuId=" + stuId + ", name=" + name + ", resSingle=" + resSingle
+				+ ", resProgram=" + resProgram + ", resTotal=" + resTotal + "]";
 	}
-
+	
+	
 }
+	
+
+	

@@ -10,9 +10,13 @@ import com.lut.lwn.onlineexam.bean.Questions;
 
 @Component
 public interface QuestionsRepository extends JpaRepository<Questions, Long>{
-    //随机出单选题
+	//随机出单选题
 	@Query(value  = "select id from Questions where type='单选'")
 	List<Long> findRandomId();
+	//随机出单选题
+	@Query(value  = "select id from Questions where type='编程'")
+	List<Long> findRandomId2();
+
 	
 	//按题目类型查询
 	@Query(value  = "select q from Questions q where q.type=?1")

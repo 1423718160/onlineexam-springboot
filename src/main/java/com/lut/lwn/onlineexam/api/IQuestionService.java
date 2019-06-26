@@ -21,9 +21,21 @@ public interface IQuestionService {
 	public List<Questions> findAllQuestion();
 	@GetMapping("/deleteQuestionById")
 	public int deleteQuestionById(@Param("questionId") Long questionId);
-	//随机出题
-	@GetMapping("/randomQuestionById")
+	//随机出题(单选)
+	@PostMapping("/randomQuestionById")
 	public List<Questions> randomQuestionById();
+	//随机出题(编程)
+	@PostMapping("/randomQuestionProgram")
+	public List<Questions> randomQuestionProg();
+		
+	//选择题成绩入库
+	@PostMapping("/saveSelectResult")
+	public void saveSelectResult(@Param("userId") Long userId , @Param("selectResult") int selectResult);
+	
+	//以学号建立文件夹，将前端填写的代码写为文件，得到运行后结果，对比答案
+	@PostMapping("executeProgramFile")
+	public String excuteProgram(@Param("content") String content);
+	
 	
 	//新增
 	@PostMapping("/addQuestion")

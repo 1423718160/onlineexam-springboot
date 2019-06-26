@@ -38,6 +38,9 @@ public class ExamPage {
 
 	@Column(name = "answer")
 	private String answer;
+	
+	@Column(name = "stuAnswer")
+	private String stuAnswer;
 
 	@Column(name = "subTime")
 	private Date subTime;
@@ -67,6 +70,14 @@ public class ExamPage {
 
 	public String getScore() {
 		return score;
+	}
+
+	public String getStuAnswer() {
+		return stuAnswer;
+	}
+
+	public void setStuAnswer(String stuAnswer) {
+		this.stuAnswer = stuAnswer;
 	}
 
 	public void setScore(String score) {
